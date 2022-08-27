@@ -12,7 +12,7 @@ abstract class Actionable
      * @throws Exception
      * @see static::handle()
      */
-    public static function run(...$arguments): \Symfony\Component\HttpFoundation\Response
+    public static function run(...$arguments)
     {
         return app(static::class)->handle(...$arguments);
     }
