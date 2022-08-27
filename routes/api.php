@@ -19,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('vulnerabilities',VulnerabilityController::class);
+Route::resource('vulnerabilities', VulnerabilityController::class);

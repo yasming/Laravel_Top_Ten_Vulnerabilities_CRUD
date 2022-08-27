@@ -2,8 +2,6 @@
 
 use App\Models\Vulnerability;
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
@@ -14,7 +12,7 @@ return new class extends Migration
      */
     public function up()
     {
-        foreach(Vulnerability::return_default_vulnerabilities() as $vulnerability) {
+        foreach (Vulnerability::return_default_vulnerabilities() as $vulnerability) {
             Vulnerability::query()->create(['title' => $vulnerability['title'], 'description' => $vulnerability['description']]);
         }
     }
